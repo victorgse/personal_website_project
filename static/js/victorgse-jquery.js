@@ -8,11 +8,11 @@ $(document).ready(function() {
 		.addTo(controller);
 
     $("#myCarousel").swiperight(function() {
-        $(this).carousel('prev');
+        $("#myCarousel").carousel('prev');
     });
 
     $("#myCarousel").swipeleft(function() {
-        $(this).carousel('next');
+        $("#myCarousel").carousel('next');
     });
 
 });

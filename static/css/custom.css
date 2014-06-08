@@ -1,44 +1,39 @@
-.carousel-inner > .item > img {
-    margin: auto;
-    min-width: 330px !important;
-    border: 5px solid #777777;
+.tpl6
+{
+	display: inline-block
 }
 
-.carousel-control {
-    top: 32%;
-    height:1em;
-    width: 0%;
+.tpl6 .bg
+{
+	height:100%;
+	width:100%;
+	background-color:#00b3fe;
+	background-color:rgba(0,179,254,.9);
+	text-align:center;
 }
 
-.carousel-control.left {
-    left: 20%;
+.tpl6 h3
+{
+	margin:0;
+	padding:15px 5px 0;
+	font-size:36px;
 }
 
-.carousel-control.right {
-    left: 81%;
+.tpl6 p
+{
+	margin:0;
+	padding:25px 5px 0;
+	font-size:18px;
 }
 
-.glyphicon-chevron-left:before {
-    content: "";
-    display:block;
-    background:url("http://i1318.photobucket.com/albums/t659/victorgse/left-circular-32_zps3afec125.png") no-repeat;
-    width:32px;
-    height:32px;
+.tpl6 .dmbutton
+{
+	display:inline-block;
+	margin:30px 5px 20px 5px;
 }
 
-.glyphicon-chevron-right:before {
-    content: "";
-    display:block;
-    background:url("http://i1318.photobucket.com/albums/t659/victorgse/right-circular-32_zps077348e9.png") no-repeat;
-    width:32px;
-    height:32px;
-}
-
-.carousel-caption {
-    position: relative;
-    left: 20%;
-    right: 20%;
-    width: 60%;
+.project-container {
+    text-align: center
 }
 
 .navbar-default .navbar-nav > li > a:hover,

@@ -26,69 +26,55 @@
     <br>
     <br>
 
-    <div id="animate" class="text-center">
-	    <h3>ANIMATION TEST</h3>
+    <hr>
+
+    <a id="projects"></a>
+
+    <br>
+    <h2 class="text-center">These are some of the projects I have worked on...</h2>
+    <br>
+    <br>
+
+    <div class="project-container">
+
+        <div class="he-wrap tpl6">
+		    <img width="440" height="220" src="{% static "imgs/RiceRocks.png" %}" alt="">
+		    <div class="he-view">
+		    	<div class="bg a0" data-animate="fadeIn">
+				    <h3 class="a4" data-animate="fadeInDown">RiceRocks</h3>
+                    <p class="a4" data-animate="fadeIn">Developed in Python for CodeSkulptor. Remake of the iconic video game Asteroids.</p>
+				    <a href="http://www.codeskulptor.org/#user29_oDDtLHsI6F_0.py" class="btn btn-info glyphicon glyphicon-link dmbutton a4" data-animate="fadeInUp"></a>
+			    </div>
+		    </div>
+	    </div>
+
+        <div class="he-wrap tpl6">
+		    <img width="440" height="220" src="{% static "imgs/Laughtr.png" %}" alt="">
+		    <div class="he-view">
+			    <div class="bg a0" data-animate="fadeIn">
+				    <h3 class="a4" data-animate="fadeInDown">Laughtr</h3>
+                    <p class="a4" data-animate="fadeIn">Developed in Python/Django. A website matching comedians with venues.</p>
+				    <a href="http://davidrussell.pythonanywhere.com/laughtr/" class="btn btn-info glyphicon glyphicon-link dmbutton a4" data-animate="fadeInUp"></a>
+			    </div>
+		    </div>
+	    </div>
+
+        <div class="he-wrap tpl6">
+		    <img width="440" height="220" src="{% static "imgs/JavaBall.png" %}" alt="">
+		    <div class="he-view">
+			    <div class="bg a0" data-animate="fadeIn">
+				    <h3 class="a4" data-animate="fadeInDown">JavaBall</h3>
+                    <p class="a4" data-animate="fadeIn">Developed in Java. Manages and processes results of a sports tournament.</p>
+				    <a href="#" class="btn btn-info glyphicon glyphicon-link dmbutton a4" data-animate="fadeInUp"></a>
+			    </div>
+		    </div>
+	    </div>
+
     </div>
 
     <br>
     <br>
-
-    <div style="background-color: darkslategrey">
-        <br>
-        <br>
-        <a id="projects"></a>
-        <br>
-        <h2 class="text-center">My Projects</h2>
-        <br>
-
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img width="600" height="300" src="{% static "imgs/RiceRocks.png" %}">
-                    <div class="carousel-caption">
-                        <h3>RiceRocks</h3>
-                        <p>Developed in Python for CodeSkulptor. You can play it <a href="http://www.codeskulptor.org/#user29_oDDtLHsI6F_0.py">here</a>. For best results, use Google Chrome.</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img width="600" height="300" src="{% static "imgs/Laughtr.png" %}">
-                    <div class="carousel-caption">
-                        <h3>Laughtr</h3>
-                        <p>Developed in Python/Django for an iTech group project. Matching comedians with venues. Check it out <a href="http://davidrussell.pythonanywhere.com/laughtr/">here</a>.</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img width="600" height="300" src="{% static "imgs/JavaBall.png" %}">
-                    <div class="carousel-caption">
-                        <h3>JavaBall</h3>
-                        <p>Developed in Java for a project in an introductory Programming course. Manages and processes results of a sports tournament.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-
-        </div>
-
-        <br>
-
-    </div>
+    <br>
+    <br>
 
 {% endblock %}

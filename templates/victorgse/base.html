@@ -4,11 +4,11 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <!-- Bootstrap -->
         <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+        <link href="{% static 'css/hoverex-all.css' %}" rel="stylesheet">
         <link href="{% static 'css/custom.css' %}" rel="stylesheet">
-
-        <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.5.1/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
 
         <title>Victor Semerdjiev{% block title %}{% endblock %}</title>
     </head>
@@ -24,7 +24,7 @@
           </div>
           <div class="navbar-collapse collapse navbar-responsive-collapse">
             <ul class="nav navbar-nav">
-              <li><a class="navbar-brand" href="#">About me</a></li>
+              <li><a class="navbar-brand" href="#">About</a></li>
               <li><a class="navbar-brand" href="/#projects">Projects</a></li>
               <li><a class="navbar-brand" href="https://www.dropbox.com/s/mcuy0c846b29f7z/Victor%20Semerdjiev%20-%20Resume.pdf">CV</a></li>
             </ul>
@@ -36,12 +36,10 @@
         </div>
 
         <script src="{% static 'js/jquery-2.1.0.min.js' %}"></script>
-        <script src="{% static 'js/jquery.mobile.custom.min.js' %}"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
-
+        <script src="{% static 'js/jquery.hoverex.min.js' %}"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
         <script type="text/javascript" src="{% static 'js/jquery.scrollmagic.min.js' %}"></script>
-
         <script src="{% static 'js/victorgse-jquery.js' %}"></script>
 
         <script>

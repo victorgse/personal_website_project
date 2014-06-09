@@ -5,7 +5,7 @@ $(document).ready(function() {
     new ScrollScene({
             triggerElement: "section#parallax",
             duration: $(window).height() + 300,
-            offset: -220
+            offset: -217
         })
         .addTo(controller)
         .triggerHook("onCenter")

@@ -38,3 +38,18 @@
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus{color:#5cb85c;background-color:transparent}
+
+#parallax {
+height: 400px;
+position: relative;
+overflow: hidden;
+}
+
+#parallax #parallaxbg {
+position: absolute;
+height: 400px;
+top: 50%;
+width: 100%;
+margin-top: -150px;
+background-image: url("../imgs/cool-background.jpg");
+}

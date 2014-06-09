@@ -1,3 +1,28 @@
+.navbar-fixed-top {
+    height: 60px; /* Whatever you want. */
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus{color:#2493d1;background-color:transparent}
+
+.navbar-default .navbar-nav > li {padding-top: 10px}
+
+#parallax {
+height: 400px;
+position: relative;
+overflow: hidden;
+}
+
+#parallax #parallaxbg {
+position: absolute;
+height: 400px;
+top: 50%;
+width: 100%;
+margin-top: -150px;
+background-image: url("../imgs/cool-background.jpg");
+background-size: cover;
+}
+
 .tpl6
 {
 	display: inline-block
@@ -34,23 +59,4 @@
 
 .project-container {
     text-align: center
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus{color:#5cb85c;background-color:transparent}
-
-#parallax {
-height: 400px;
-position: relative;
-overflow: hidden;
-}
-
-#parallax #parallaxbg {
-position: absolute;
-height: 400px;
-top: 50%;
-width: 100%;
-margin-top: -150px;
-background-image: url("../imgs/cool-background.jpg");
-background-size: cover;
 }

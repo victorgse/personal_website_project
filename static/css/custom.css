@@ -60,3 +60,19 @@ background-size: cover;
 .project-container {
     text-align: center
 }
+
+#parallax2 {
+height: 400px;
+position: relative;
+overflow: hidden;
+}
+
+#parallax2 #parallaxbg2 {
+position: absolute;
+height: 400px;
+top: 50%;
+width: 100%;
+margin-top: -150px;
+background-image: url("../imgs/whdb-background.jpg");
+background-size: cover;
+}

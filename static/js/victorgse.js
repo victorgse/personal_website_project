@@ -46,12 +46,13 @@ $(document).ready(function() {
 
 });
 
+var map;
 function initialize() {
   var mapOptions = {
     zoom: 3,
     center: new google.maps.LatLng(50, -42)
   }
-  var map = new google.maps.Map(document.getElementById('map-canvas'),
+  map = new google.maps.Map(document.getElementById('map-canvas'),
                                 mapOptions);
   setVisitedMarkers(map, visited);
   setLivedMarkers(map, lived);
@@ -86,9 +87,11 @@ function setVisitedMarkers(map, locations) {
         position: myLatLng,
         map: map,
         icon: visitedMarkerIcon,
+        animation: google.maps.Animation.DROP,
         title: countriesVisited[0],
         zIndex: countriesVisited[3]
     });
+    google.maps.event.addListener(visitedMarkers[i], "click", markerClick);
     //google.maps.event.addListener(visitedMarkers[i], 'click', function(visitedMarkers, i) {
     //    return function() {
     //        toggleBounce(visitedMarkers[i]);
@@ -114,9 +117,11 @@ function setLivedMarkers(map, locations) {
         position: myLatLng,
         map: map,
         icon: livedMarkerIcon,
+        animation: google.maps.Animation.DROP,
         title: placesLived[0],
         zIndex: placesLived[3]
     });
+    google.maps.event.addListener(livedMarkers[i], "click", markerClick);
     //google.maps.event.addListener(livedMarkers[i], 'click', function(livedMarkers, i) {
     //    return function() {
     //        toggleBounce(livedMarkers[i]);
@@ -132,5 +137,18 @@ function toggleBounce(marker) {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   }
 }
+
+var that;
+var infoWindow = new google.maps.InfoWindow();
+function markerClick() {
+	if (that) {
+		that.setZIndex();
+	}
+	that = this;
+	this.setZIndex(google.maps.Marker.MAX_ZINDEX + 1);
+    var contentString = '<h5 class="text-primary">' + this.getTitle() + '</h5>';
+	infoWindow.setContent(contentString);
+	infoWindow.open(map, this);
+};
 
 google.maps.event.addDomListener(window, 'load', initialize);

@@ -134,4 +134,3 @@ function toggleBounce(marker) {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-

@@ -77,4 +77,7 @@ background-image: url("../imgs/whdb-background.jpg");
 background-size: cover;
 }
 
-#map-canvas { height: 300px }
+#map-canvas {
+    height: 390px;
+    width: 915px;
+}

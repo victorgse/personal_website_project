@@ -24,6 +24,26 @@ $(document).ready(function() {
             TweenMax.to("#parallax2 #parallaxbg2", 1, {backgroundPosition: "0 -320%", ease: Linear.easeNone})
         ]));
 
+    $('.visited').hover(
+        function() {
+            var i = $(this).attr('id');
+            toggleBounce(visitedMarkers[i]);
+        }, function() {
+            var i = $(this).attr('id');
+            toggleBounce(visitedMarkers[i]);
+        }
+    );
+
+    $('.lived').hover(
+        function() {
+            var i = $(this).attr('id');
+            toggleBounce(livedMarkers[i]);
+        }, function() {
+            var i = $(this).attr('id');
+            toggleBounce(livedMarkers[i]);
+        }
+    );
+
 });
 
 function initialize() {
@@ -56,18 +76,24 @@ var visited = [
   ['United States', 39.842286, -101.352541, 16]
 ];
 
+var visitedMarkers = [];
 function setVisitedMarkers(map, locations) {
-  var visitedMarker = 'static/imgs/country.png';
+  var visitedMarkerIcon = 'static/imgs/country.png';
   for (var i = 0; i < locations.length; i++) {
     var countriesVisited = locations[i];
     var myLatLng = new google.maps.LatLng(countriesVisited[1], countriesVisited[2]);
-    var marker = new google.maps.Marker({
+    visitedMarkers[i] = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        icon: visitedMarker,
+        icon: visitedMarkerIcon,
         title: countriesVisited[0],
         zIndex: countriesVisited[3]
     });
+    //google.maps.event.addListener(visitedMarkers[i], 'click', function(visitedMarkers, i) {
+    //    return function() {
+    //        toggleBounce(visitedMarkers[i]);
+    //    }
+    //}(visitedMarkers, i));
   }
 }
 
@@ -78,18 +104,32 @@ var lived = [
   ['Glasgow, Scotland', 55.863368, -4.251137, 20]
 ];
 
+var livedMarkers = [];
 function setLivedMarkers(map, locations) {
-  var livedMarker = 'static/imgs/home.png';
+  var livedMarkerIcon = 'static/imgs/home.png';
   for (var i = 0; i < locations.length; i++) {
     var placesLived = locations[i];
     var myLatLng = new google.maps.LatLng(placesLived[1], placesLived[2]);
-    var marker = new google.maps.Marker({
+    livedMarkers[i] = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        icon: livedMarker,
+        icon: livedMarkerIcon,
         title: placesLived[0],
         zIndex: placesLived[3]
     });
+    //google.maps.event.addListener(livedMarkers[i], 'click', function(livedMarkers, i) {
+    //    return function() {
+    //        toggleBounce(livedMarkers[i]);
+    //    }
+    //}(livedMarkers, i));
+  }
+}
+
+function toggleBounce(marker) {
+  if (marker.getAnimation() != null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
   }
 }
 

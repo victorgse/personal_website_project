@@ -58,7 +58,25 @@ function initialize() {
   setLivedMarkers(map, lived);
 }
 
-
+var visited = [
+  ['Austria', 47.583937, 14.148559, 1],
+  ['Bulgaria', 42.738944, 25.222778, 2],
+  ['Croatia', 45.104546, 14.915771, 3],
+  ['Czech Republic', 49.700840, 15.189268, 4],
+  ['France', 46.528635, 2.453612, 5],
+  ['Germany', 51.041394, 10.363769, 6],
+  ['Greece', 39.453161, 22.540283, 7],
+  ['Hungary', 46.995241, 19.608764, 8],
+  ['Italy', 43.452919, 12.209472, 9],
+  ['Macedonia', 41.648288, 21.707153, 10],
+  ['Serbia', 44.079693, 20.839233, 11],
+  ['Slovakia', 48.676454, 19.378052, 12],
+  ['Slovenia', 46.065608, 14.598999, 13],
+  ['Switzerland', 46.769968, 7.963257, 14],
+  ['Turkey', 38.959409, 35.460205, 15],
+  ['United Kingdom', 55.028022, -2.77588, 16],
+  ['United States', 39.842286, -101.352541, 17]
+];
 
 var visitedMarkers = [];
 function setVisitedMarkers(map, locations) {
